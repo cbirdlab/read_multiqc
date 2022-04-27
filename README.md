@@ -1,4 +1,7 @@
 # read_multiqc
+
+---
+
 R tools to read in the tidy MultiQC outputs from FastQC, FastP, and FastQScreen into a tibble
 
 # [`read_multiqc.R`](read_multiqc.R)
