@@ -1,7 +1,7 @@
 # MultiQC-to-R
 Tools to read in the tidy MultiQC outputs from FastQC, FastP, and FastQScreen
 
-# [`read_multiqc_data.R`](https://github.com/cbirdlab/MultiQC-to-R/blob/main/read_multiqc_data.R)
+# [`read_multiqc.R`](read_multiqc_data.R)
 
 This script takes a directory and read into the enviornment [`Multiqc`](https://multiqc.info/) outputs from [`FastQC`](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/), [`FastP`](https://github.com/OpenGene/fastp), and [`FastQScreen`](https://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/) using the following functions.
 
