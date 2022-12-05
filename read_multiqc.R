@@ -22,9 +22,15 @@ read_multiqc_fastqc <- function(PATH_MQC_FQC,
     clean_names()
 }
 
+read_multiqc_fastqc1 <- function(PATH_MQC_FQC,
+                                FILE1 = "multiqc_fastqc.txt"){
+  read_tsv(paste(PATH_MQC_FQC, FILE1, sep = "")) %>%
+    clean_names()
+}
+
 read_multiqc_fastqc2 <- function(PATH_MQC_FQC,
-                                FILE1 = "multiqc_general_stats.txt",
-                                FILE2 = "multiqc_fastqc.txt"){
+                                 FILE1 = "multiqc_general_stats.txt",
+                                 FILE2 = "multiqc_fastqc.txt"){
   read_tsv(paste(PATH_MQC_FQC, FILE2, sep = "")) %>%
     inner_join(read_tsv(paste(PATH_MQC_FQC, FILE1, sep = ""))) %>%
     clean_names()
@@ -35,6 +41,12 @@ read_multiqc_fastp <- function(PATH_MQC_FP,
                                FILE2 = "mqc_fastp_filtered_reads_plot_1.txt"){
   read_tsv(paste(PATH_MQC_FP, FILE1, sep = "")) %>%
     inner_join(read_tsv(paste(PATH_MQC_FP, FILE2, sep = ""))) %>%
+    clean_names()
+}
+
+read_multiqc_fastp1 <- function(PATH_MQC_FP,
+                                FILE1 = "multiqc_general_stats.txt"){
+  read_tsv(paste(PATH_MQC_FP, FILE1, sep = "")) %>%
     clean_names()
 }
 
